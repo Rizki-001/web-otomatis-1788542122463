@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KreatifStudio - Portofolio Digital & Desain Modern</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 flex flex-col min-h-screen">
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-50 glass-card border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="text-2xl font-bold tracking-wider text-white">
+                    ALEX<span class="gradient-text">.DEV</span>
+                </a>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="index.html" class="text-indigo-400 hover:text-indigo-300 transition-colors">Beranda</a>
+                    <a href="about.html" class="text-slate-300 hover:text-indigo-400 transition-colors">Tentang Saya</a>
+                    <a href="projects.html" class="text-slate-300 hover:text-indigo-400 transition-colors">Portofolio</a>
+                    <a href="contact.html" class="text-slate-300 hover:text-indigo-400 transition-colors">Kontak</a>
+                </div>
+                <div class="hidden md:block">
+                    <a href="contact.html" class="px-5 py-2.5 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-sm transition-all duration-300 shadow-lg shadow-indigo-500/25">
+                        Mulai Proyek
+                    </a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-slate-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-indigo-400 bg-slate-800">Beranda</a>
+            <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800">Tentang Saya</a>
+            <a href="projects.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800">Portofolio</a>
+            <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative py-20 md:py-32 overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl -z-10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-wider text-indigo-400 uppercase bg-indigo-950/60 border border-indigo-800/50 rounded-full">
+                UI/UX Designer & Web Developer
+            </span>
+            <h1 class="text-4xl md:text-7xl font-extrabold text-white tracking-tight leading-tight mb-6">
+                Membangun Pengalaman Digital <br class="hidden md:block"/>
+                yang <span class="gradient-text">Kreatif & Inovatif</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-base md:text-lg text-slate-400 mb-10 leading-relaxed">
+                Saya membantu brand dan bisnis berkembang melalui solusi desain modern, pengalaman pengguna yang intuitif, serta pengembangan web berkualitas tinggi.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="projects.html" class="px-8 py-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold transition-all duration-300 shadow-lg shadow-indigo-600/30 flex items-center justify-center gap-2">
+                    Lihat Karya Saya <i class="fas fa-arrow-right text-sm"></i>
+                </a>
+                <a href="contact.html" class="px-8 py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 font-semibold transition-all duration-300 flex items-center justify-center">
+                    Hubungi Saya
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- HIGHLIGHT STATS -->
+    <section class="py-12 border-y border-slate-900 bg-slate-900/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <p class="text-3xl md:text-4xl font-extrabold text-white mb-1">5+</p>
+                    <p class="text-xs md:text-sm text-slate-400 uppercase tracking-wider">Tahun Pengalaman</p>
+                </div>
+                <div>
+                    <p class="text-3xl md:text-4xl font-extrabold text-white mb-1">40+</p>
+                    <p class="text-xs md:text-sm text-slate-400 uppercase tracking-wider">Proyek Selesai</p>
+                </div>
+                <div>
+                    <p class="text-3xl md:text-4xl font-extrabold text-white mb-1">25+</p>
+                    <p class="text-xs md:text-sm text-slate-400 uppercase tracking-wider">Klien Puas</p>
+                </div>
+                <div>
+                    <p class="text-3xl md:text-4xl font-extrabold text-white mb-1">99%</p>
+                    <p class="text-xs md:text-sm text-slate-400 uppercase tracking-wider">Tingkat Keberhasilan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED PROJECTS -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">Proyek Unggulan</h2>
+                    <p class="text-slate-400">Beberapa karya terbaik yang baru saja saya selesaikan.</p>
+                </div>
+                <a href="projects.html" class="mt-4 md:mt-0 text-indigo-400 hover:text-indigo-300 font-medium flex items-center gap-2">
+                    Lihat Semua Proyek <i class="fas fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="glass-card rounded-2xl overflow-hidden group hover:-translate-y-2 transition-all duration-300">
+                    <div class="relative overflow-hidden h-52">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Fintech App" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 bg-slate-950/80 backdrop-blur-md text-indigo-400 text-xs px-3 py-1 rounded-full font-medium border border-indigo-500/30">Web App</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">Fintech Analytics Dashboard</h3>
+                        <p class="text-slate-400 text-sm mb-4 line-clamp-2">Platform analisis keuangan terpadu dengan visualisasi data real-time untuk bisnis modern.</p>
+                        <a href="projects.html" class="text-sm font-semibold text-indigo-400 hover:underline">Detail Proyek &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="glass-card rounded-2xl overflow-hidden group hover:-translate-y-2 transition-all duration-300">
+                    <div class="relative overflow-hidden h-52">
+                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=800&q=80" alt="E-commerce UI" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 bg-slate-950/80 backdrop-blur-md text-pink-400 text-xs px-3 py-1 rounded-full font-medium border border-pink-500/30">UI/UX Design</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">Luxury E-Commerce Experience</h3>
+                        <p class="text-slate-400 text-sm mb-4 line-clamp-2">Redesain toko online brand fashion dengan fokus pada estetika minimalis dan konversi tinggi.</p>
+                        <a href="projects.html" class="text-sm font-semibold text-indigo-400 hover:underline">Detail Proyek &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="glass-card rounded-2xl overflow-hidden group hover:-translate-y-2 transition-all duration-300">
+                    <div class="relative overflow-hidden h-52">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="SaaS Website" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 bg-slate-950/80 backdrop-blur-md text-emerald-400 text-xs px-3 py-1 rounded-full font-medium border border-emerald-500/30">Frontend Dev</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">AI Productivity SaaS Platform</h3>
+                        <p class="text-slate-400 text-sm mb-4 line-clamp-2">Landing page interaktif bernuansa futuristik untuk produk manajemen tugas berbasis AI.</p>
+                        <a href="projects.html" class="text-sm font-semibold text-indigo-400 hover:underline">Detail Proyek &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="mt-auto bg-slate-900 border-t border-slate-800 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div>
+                    <a href="index.html" class="text-xl font-bold text-white">ALEX<span class="gradient-text">.DEV</span></a>
+                    <p class="text-xs text-slate-400 mt-1">Mengubah ide menjadi pengalaman digital yang berkesan.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-slate-400 hover:text-indigo-400 transition-colors"><i class="fab fa-github text-xl"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-indigo-400 transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-indigo-400 transition-colors"><i class="fab fa-dribbble text-xl"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-indigo-400 transition-colors"><i class="fab fa-instagram text-xl"></i></a>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-slate-800 text-center text-xs text-slate-500">
+                &copy; 2023 Alex Developer. Semua Hak Cipta Dilindungi.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
