@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Karya - KreatifStudio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 flex flex-col min-h-screen">
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-50 glass-card border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="text-2xl font-bold tracking-wider text-white">
+                    ALEX<span class="gradient-text">.DEV</span>
+                </a>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="index.html" class="text-slate-300 hover:text-indigo-400 transition-colors">Beranda</a>
+                    <a href="about.html" class="text-slate-300 hover:text-indigo-400 transition-colors">Tentang Saya</a>
+                    <a href="projects.html" class="text-indigo-400 hover:text-indigo-300 transition-colors">Portofolio</a>
+                    <a href="contact.html" class="text-slate-300 hover:text-indigo-400 transition-colors">Kontak</a>
+                </div>
+                <div class="hidden md:block">
+                    <a href="contact.html" class="px-5 py-2.5 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-sm transition-all duration-300">
+                        Mulai Proyek
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-slate-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800">Beranda</a>
+            <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800">Tentang Saya</a>
+            <a href="projects.html" class="block px-3 py-2 rounded-md text-base font-medium text-indigo-400 bg-slate-800">Portofolio</a>
+            <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- HEADER & FILTERS -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Galeri <span class="gradient-text">Portofolio</span></h1>
+                <p class="text-slate-400">Jelajahi kumpulan proyek terbaru saya dari berbagai kategori pengembangan dan desain.</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition-all bg-indigo-600 text-white" data-filter="all">Semua Proyek</button>
+                <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition-all bg-slate-800 text-slate-300 hover:bg-slate-700" data-filter="web">Web Development</button>
+                <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition-all bg-slate-800 text-slate-300 hover:bg-slate-700" data-filter="uiux">UI/UX Design</button>
+                <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition-all bg-slate-800 text-slate-300 hover:bg-slate-700" data-filter="mobile">Mobile App</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden" data-category="web">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Web Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-indigo-400 uppercase">Web Development</span>
+                        <h3 class="text-xl font-bold text-white mt-1 mb-2">Fintech Analytics Dashboard</h3>
+                        <p class="text-slate-400 text-sm mb-4">Aplikasi web pemantauan transaksi finansial dengan fitur integrasi API perbankan.</p>
+                        <a href="#" class="text-indigo-400 hover:underline text-sm font-medium">Lihat Detail &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden" data-category="uiux">
+                    <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=800&q=80" alt="UI Design" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-pink-400 uppercase">UI/UX Design</span>
+                        <h3 class="text-xl font-bold text-white mt-1 mb-2">Luxury E-Commerce UI</h3>
+                        <p class="text-slate-400 text-sm mb-4">Desain antarmuka pengguna responsif untuk brand fashion kelas atas.</p>
+                        <a href="#" class="text-indigo-400 hover:underline text-sm font-medium">Lihat Detail &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden" data-category="mobile">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80" alt="Mobile App" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-emerald-400 uppercase">Mobile App</span>
+                        <h3 class="text-xl font-bold text-white mt-1 mb-2">Fitness Tracker App</h3>
+                        <p class="text-slate-400 text-sm mb-4">Aplikasi mobile pelacak kesehatan dan olahraga harian dengan statistik intuitif.</p>
+                        <a href="#" class="text-indigo-400 hover:underline text-sm font-medium">Lihat Detail &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden" data-category="web">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="SaaS Web" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-indigo-400 uppercase">Web Development</span>
+                        <h3 class="text-xl font-bold text-white mt-1 mb-2">AI Productivity SaaS</h3>
+                        <p class="text-slate-400 text-sm mb-4">Landing page interaktif bernuansa futuristik dengan optimasi SEO tinggi.</p>
+                        <a href="#" class="text-indigo-400 hover:underline text-sm font-medium">Lihat Detail &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="mt-auto bg-slate-900 border-t border-slate-800 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-500">
+            &copy; 2023 Alex Developer. Semua Hak Cipta Dilindungi.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
