@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Saya - KreatifStudio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 flex flex-col min-h-screen">
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-50 glass-card border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="text-2xl font-bold tracking-wider text-white">
+                    ALEX<span class="gradient-text">.DEV</span>
+                </a>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="index.html" class="text-slate-300 hover:text-indigo-400 transition-colors">Beranda</a>
+                    <a href="about.html" class="text-slate-300 hover:text-indigo-400 transition-colors">Tentang Saya</a>
+                    <a href="projects.html" class="text-slate-300 hover:text-indigo-400 transition-colors">Portofolio</a>
+                    <a href="contact.html" class="text-indigo-400 hover:text-indigo-300 transition-colors">Kontak</a>
+                </div>
+                <div class="hidden md:block">
+                    <a href="contact.html" class="px-5 py-2.5 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-sm transition-all duration-300">
+                        Mulai Proyek
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-slate-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800">Beranda</a>
+            <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800">Tentang Saya</a>
+            <a href="projects.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800">Portofolio</a>
+            <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-indigo-400 bg-slate-800">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- CONTACT CONTENT -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Mari Kita <span class="gradient-text">Bekerjasama</span></h1>
+                <p class="text-slate-400">Punya ide proyek menarik atau ingin berkonsultasi? Jangan ragu untuk menghubungi saya melalui formulir di bawah ini.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Left: Info Cards -->
+                <div class="space-y-6">
+                    <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center text-xl shrink-0">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-1">Email</h3>
+                            <p class="text-slate-400 text-sm">alex@kreatifstudio.dev</p>
+                            <p class="text-slate-400 text-sm">hello@alexpratama.com</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center text-xl shrink-0">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-1">Telepon / WhatsApp</h3>
+                            <p class="text-slate-400 text-sm">+62 812 3456 7890</p>
+                            <p class="text-xs text-slate-500 mt-1">Senin - Jumat, 09:00 - 17:00 WIB</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center text-xl shrink-0">
+                            <i class="fas fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-1">Lokasi</h3>
+                            <p class="text-slate-400 text-sm">Jakarta, Indonesia</p>
+                            <p class="text-xs text-slate-500 mt-1">Tersedia untuk remote work secara global.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Interactive Form -->
+                <div class="lg:col-span-2 glass-card p-8 rounded-2xl">
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-300 mb-2">Nama Lengkap</label>
+                                <input type="text" required placeholder="Masukkan nama Anda" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-300 mb-2">Alamat Email</label>
+                                <input type="email" required placeholder="nama@email.com" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Subjek / Topik</label>
+                            <input type="text" required placeholder="Contoh: Pembuatan Website E-Commerce" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Pesan Anda</label>
+                            <textarea rows="5" required placeholder="Jelaskan detail proyek atau pertanyaan Anda..." class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold transition-all shadow-lg shadow-indigo-600/30 flex items-center justify-center gap-2">
+                            <i class="fas fa-paper-plane text-sm"></i> Kirim Pesan
+                        </button>
+
+                        <div id="form-status" class="hidden"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="mt-auto bg-slate-900 border-t border-slate-800 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-500">
+            &copy; 2023 Alex Developer. Semua Hak Cipta Dilindungi.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
